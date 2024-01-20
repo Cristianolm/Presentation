@@ -1,0 +1,56 @@
+.errorpage {
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  gap: 10px;
+
+  grid-template-areas:
+    "a a a d"
+    "c e e d"
+    "c e e b"
+    "f e e b"
+    "f e e b"
+    "g e e b";
+
+  #box1 {
+    grid-area: a;
+  }
+
+  #box2 {
+    grid-area: b;
+  }
+
+  #box3 {
+    grid-area: c;
+  }
+
+  #box4 {
+    grid-area: d;
+  }
+
+  #box5 {
+    grid-area: e;
+  }
+
+  #box6 {
+    grid-area: f;
+  }
+
+  #box7 {
+    grid-area: g;
+  }
+
+  #box8 {
+    grid-area: h;
+  }
+}
+
+.box {
+  width: 50px;
+  height: 50px;
+  background-color: blue;
+}
