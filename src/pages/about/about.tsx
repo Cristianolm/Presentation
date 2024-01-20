@@ -60,7 +60,7 @@ const About: React.FC = () => {
             >
               <a
                 className="font-bold"
-                href={"/pdf/CV_Cristiano(pt).pdf"}
+                href={"/presentation/pdf/CV_Cristiano(pt).pdf"}
                 target="_blank"
               >
                 PT
@@ -72,7 +72,7 @@ const About: React.FC = () => {
             >
               <a
                 className="font-bold"
-                href={"/pdf/CV_Cristiano(en).pdf"}
+                href={"/presentation/pdf/CV_Cristiano(en).pdf"}
                 target="_blank"
               >
                 EN
