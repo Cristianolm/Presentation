@@ -68,21 +68,21 @@ $lg-aquare-img-widht: 1025px;
       @container (max-width: 1025px) {
         .image {
           @extend %image-display;
-          background-image: url("/ai/original/384x640/lg/funk-art-2.png");
+          background-image: url("/ai/384x640/lg/funk-art-2.png");
         }
       }
 
       @container (max-width: 550px) {
         .image {
           @extend %image-display;
-          background-image: url("/ai/original/384x640/md/funk-art-2.png");
+          background-image: url("/ai/384x640/md/funk-art-2.png");
         }
       }
 
       @container (max-width: 120px) {
         .image {
           @extend %image-display;
-          background-image: url("public/ai/original/384x640/sm/funk-art-2.png");
+          background-image: url("/ai/384x640/sm/funk-art-2.png");
         }
       }
     }
@@ -100,21 +100,21 @@ $lg-aquare-img-widht: 1025px;
       @container (max-width: 1025px) {
         .image {
           @extend %image-display;
-          background-image: url("/ai/original/1024x1024/lg/music3.png");
+          background-image: url("/ai/1024x1024/lg/music3.png");
         }
       }
 
       @container (max-width: 550px) {
         .image {
           @extend %image-display;
-          background-image: url("/ai/original/1024x1024/md/music3.png");
+          background-image: url("/ai/1024x1024/md/music3.png");
         }
       }
 
       @container (max-width: 120px) {
         .image {
           @extend %image-display;
-          background-image: url("/ai/original/1024x1024/sm/music3.png");
+          background-image: url("/ai/1024x1024/sm/music3.png");
         }
       }
     }
@@ -132,21 +132,21 @@ $lg-aquare-img-widht: 1025px;
       @container (max-width: 1025px) {
         .image {
           @extend %image-display;
-          background-image: url("/ai/original/1024x1024/lg/funk-art-2.png");
+          background-image: url("/ai/1024x1024/lg/funk-art-2.png");
         }
       }
 
       @container (max-width: 550px) {
         .image {
           @extend %image-display;
-          background-image: url("/ai/original/1024x1024/md/funk-art-2.png");
+          background-image: url("/ai/1024x1024/md/funk-art-2.png");
         }
       }
 
       @container (max-width: 120px) {
         .image {
           @extend %image-display;
-          background-image: url("/ai/original/1024x1024/sm/funk-art-2.png");
+          background-image: url("/ai/1024x1024/sm/funk-art-2.png");
         }
       }
     }
