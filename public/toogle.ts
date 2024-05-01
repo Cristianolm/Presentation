@@ -10,14 +10,14 @@ if (
 }
 
 window.onload = () => {
-  const checkbox = document.querySelector("#themeCheckbox") as HTMLInputElement;
+  const checkbox = document.querySelector("#themeCheckbox");
 
   if (
     localStorage.theme === "light" ||
     (!("theme" in localStorage) &&
       window.matchMedia("(prefers-color-scheme: light)").matches)
   ) {
-    checkbox.checked = true;
+    checkbox?.setAttribute("checked", "true");
   }
 
   checkbox?.addEventListener("change", function (e) {

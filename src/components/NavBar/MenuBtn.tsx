@@ -4,8 +4,6 @@ interface MenuBtnProps {
 }
 
 const MenuBtn: React.FC<MenuBtnProps> = ({ handleClick, checkState }) => {
-  console.log(checkState);
-
   return (
     <label className="z-20">
       <input
