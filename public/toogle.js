@@ -17,7 +17,7 @@ window.onload = () => {
     (!("theme" in localStorage) &&
       window.matchMedia("(prefers-color-scheme: light)").matches)
   ) {
-    checkbox?.setAttribute("checked", "true");
+    checkbox.checked = true;
   }
 
   checkbox?.addEventListener("change", function (e) {
