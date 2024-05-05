@@ -1,9 +1,56 @@
 import React from "react";
+import { useEffect, useState } from "react";
 
 interface ThemeButtonProps {
   checkedValue: boolean;
 }
+
+const LIGHTMODE = "light";
+const DARKMODE = "dark";
+
 const ThemeButton: React.FC<ThemeButtonProps> = ({ checkedValue }) => {
+  const [isChecked, setIsChecked] = useState(
+    localStorage.theme === LIGHTMODE ||
+      (!("theme" in localStorage) &&
+        window.matchMedia("(prefers-color-scheme: light)").matches),
+  );
+
+  useEffect(() => {
+    if (isChecked) {
+      document.documentElement.classList.remove(DARKMODE);
+      localStorage.theme = LIGHTMODE;
+    } else {
+      document.documentElement.classList.add(DARKMODE);
+      localStorage.theme = DARKMODE;
+    }
+  }, [isChecked]);
+
+  useEffect(() => {
+    const checkbox = document.querySelector<HTMLInputElement>("#themeCheckbox");
+
+    if (checkbox) {
+      if (
+        localStorage.theme === "light" ||
+        (!("theme" in localStorage) &&
+          window.matchMedia("(prefers-color-scheme: light)").matches)
+      ) {
+        checkbox.checked = true;
+      }
+
+      checkbox.addEventListener("change", function (e) {
+        const target = e.target as HTMLInputElement;
+        setIsChecked(target.checked ?? false);
+      });
+
+      return () => {
+        checkbox.removeEventListener("change", function (e) {
+          const target = e.target as HTMLInputElement;
+          setIsChecked(target.checked ?? false);
+        });
+      };
+    }
+  }, []);
+
   return (
     <label
       className={`relative flex cursor-pointer items-center ${
